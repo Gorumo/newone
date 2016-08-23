@@ -1,0 +1,12 @@
+newone/__init__.py
+newone/newone.py
+newone/static/README.txt
+newone/static/css/newone.css
+newone/static/html/newone.html
+newone/static/js/src/newone.js
+newone_xblock.egg-info/PKG-INFO
+newone_xblock.egg-info/SOURCES.txt
+newone_xblock.egg-info/dependency_links.txt
+newone_xblock.egg-info/entry_points.txt
+newone_xblock.egg-info/requires.txt
+newone_xblock.egg-info/top_level.txt
