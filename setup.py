@@ -22,7 +22,7 @@ def package_data(pkg, roots):
 
 setup(
     name='newone-xblock',
-    version='0.118',
+    version='0.1176',
     description='newone XBlock',   # TODO: write a better description.
     license='UNKNOWN',          # TODO: choose a license: 'AGPL v3' and 'Apache 2.0' are popular.
     packages=[

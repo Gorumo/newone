@@ -3,6 +3,7 @@ import json
 import pkg_resources
 import datetime
 import mysql.connector
+import urllib2
 
 from xblock.core import XBlock
 from xblock.fields import Scope, Integer, String
@@ -16,14 +17,11 @@ class NewOneXBlock(XBlock):
     TO-DO: document what your XBlock does.
     """
     arr=[]
+    arr_links=[]
+    arr_description = []
     sprql_arr=[]
     
-    mas=['aaa','aa','a','bbb','bb','cccc','ccc','cc','c','d','dd','ddd','dddd','ddddd']
-    
-    # Fields are defined on the class.  You can access them in your code as
-    # self.<fieldname>.
-
-    # TO-DO: delete count, and define your own fields.
+    # display name for xblock
     """display_name = String(
         display_name="Display Name",
         help="This name appears in the horizontal navigation at the top of the page.",
@@ -39,8 +37,8 @@ class NewOneXBlock(XBlock):
         default=None, scope=Scope.user_state_summary,
         help="shows next nuber",
     )
-    count = Integer(
-        default=0, scope=Scope.user_state_summary,
+    count = String(
+        default=None, scope=Scope.user_state_summary,
         help="A simple counter, to show something happening",
     )
     sprql = String(
@@ -59,13 +57,31 @@ class NewOneXBlock(XBlock):
         The primary view of the NewOneXBlock, shown to students
         when viewing courses.
         """
+        # !!! Staff or Student? 
+        if self.is_course_staff():
+            return self.staff_view()
+        # !!!    
         html = self.resource_string("static/html/newone.html")
         frag = Fragment(html.format(self=self))
         frag.add_css(self.resource_string("static/css/newone.css"))
         frag.add_javascript(self.resource_string("static/js/src/newone.js"))
         frag.initialize_js('NewOneXBlock')
         return frag
-
+    
+    # staff_view is not a standart function of xblock!
+    def is_course_staff(self):
+        return getattr(self.xmodule_runtime, 'user_is_staff', False)
+        
+    def staff_view(self):
+        """
+        Create a fragment used to display the edit view in the Studio.
+        """
+        html = self.resource_string("static/html/newone_edit.html")
+        frag = Fragment(html.format(self=self))
+        frag.add_css(self.resource_string("static/css/newone.css"))
+        frag.add_javascript(self.resource_string("static/js/src/newone.js"))
+        frag.initialize_js('NewOneXBlock')
+        return frag
     
         
     @XBlock.json_handler
@@ -75,20 +91,68 @@ class NewOneXBlock(XBlock):
         """
         # Just to show data coming in...
         assert data['hello'] == 'world'
-
-        self.count += 1
-        return {"count": self.count}
-
-    @XBlock.json_handler
-    def sub_but(self, data, suffix=''):
-        self.m=data['key']
+        """
+        response = urllib2.urlopen('https://en.wikipedia.org/w/api.php?action=opensearch&search=tria&limit=10&namespace=0&format=json')
+        temp = json.load(response)
+        self.count = json.dumps(temp[1])
+        """
         self.arr[:]=[]
-        for self.n in self.mas:
-            if self.n.startswith(self.m):
+        self.arr_description[:]=[]
+        self.arr_links[:]=[]
+        block_id = str(self.location.name)
+        cnx = mysql.connector.connect(**s.database)
+        cursor = cnx.cursor()
+        cursor.execute("SELECT concept_label, concept_description,concept_URI FROM Concepts, Concept_Content_Manager WHERE block_id = '"+block_id+"' AND Concepts.concept_id = Concept_Content_Manager.concept_id;")
+        data = cursor.fetchall() 
+        for self.n in data:
+            self.arr.append(self.n[0])
+            self.arr_description.append(self.n[1])
+            self.arr_links.append(self.n[2])
+        self.count = json.dumps(self.arr)
+        desc = json.dumps(self.arr_description)
+        link = json.dumps(self.arr_links)
+        return {"count": self.count,"desc":desc,"link": link}
+
+    # Handler for live seach over local concepts and dbpedia concepts
+    @XBlock.json_handler
+    def live_search(self, data, suffix=''):
+        self.m=data['key']
+        if self.m == '':
+            self.but = json.dumps('')
+            desc = json.dumps('')
+            link = json.dumps('')
+        else:   
+            self.arr[:]=[]
+            self.arr_description[:]=[]
+            self.arr_links[:]=[]
+            
+            #Local search in SQL database
+            cnx = mysql.connector.connect(**s.database)
+            cursor = cnx.cursor()
+            cursor.execute("SELECT `concept_label`,`concept_description` FROM `Concepts` WHERE `concept_label` LIKE '"+self.m+"%' ;")
+            data = cursor.fetchall() 
+            for self.n in data:
+                self.arr.append(self.n[0])
+                self.arr_description.append(self.n[1])  
+                self.arr_links.append('')
+                
+            response = urllib2.urlopen("https://en.wikipedia.org/w/api.php?action=opensearch&search="+self.m+"&limit=10&namespace=0&format=json")
+            data = json.load(response)
+            for self.n in data[1]:
                 self.arr.append(self.n)
-        self.but = json.dumps(self.arr)
-        return {"but": self.but}
+            for self.n in data[2]:    
+                self.arr_description.append(self.n)
+            for self.n in data[3]:  
+                self.n=self.n.replace('https://en.wikipedia.org/wiki','http://dbpedia.org/page')  
+                self.arr_links.append(self.n)    
+                 
+            self.but = json.dumps(self.arr)
+            desc = json.dumps(self.arr_description)
+            link = json.dumps(self.arr_links)
+            block_id = str(self.location.name)
+        return {"but": self.but, "desc": desc, "link": link, "block_id": block_id}
         
+    # Test handler. SPARQL Endpoint connection.
     @XBlock.json_handler
     def sparql_q(self, data, suffix=''):
         self.sprql_arr[:]=[]
@@ -111,21 +175,28 @@ class NewOneXBlock(XBlock):
             self.sprql_arr.append(result["itemLabel"]["value"])
         self.sprql = json.dumps(self.sprql_arr) 
         return {"sprql" : self.sprql}
-        
+     
+    # Handler for data insert to SQL database about new concepts or add new links between concept and xblock  
     @XBlock.json_handler
     def termsListCheck(self, data, suffix=''):
-        new_term = data['key']
-        new_id = 111
+        new_term = data['concept'] #concept
+        
+        # !!! Need to convert all symbols to readable sql and RDF format
+        te = data['description']
+        new_desc = te.encode('ascii', 'ignore') #concept_description
+        # !!!
+        
+        new_link = data['link'] #concept_link
+        new_id = self.location.name #block_id
         field_id = 1
 
         cnx = mysql.connector.connect(**s.database)
         cursor = cnx.cursor()
-        
         cursor.execute("SELECT `concept_id` FROM `Concepts` WHERE `concept_label` = '"+new_term+"' ;")
         data = cursor.fetchall() 
         count = cursor.rowcount
         if count == 0:
-            cursor.execute("INSERT INTO `Concepts` (`concept_id`, `concept_URI`, `field_id`, `concept_label`, `concept_description`) VALUES (NULL, %s, %s, %s, %s)", ('URI', field_id, new_term,'Description of concept'))
+            cursor.execute("INSERT INTO `Concepts` (`concept_id`, `concept_URI`, `field_id`, `concept_label`, `concept_description`) VALUES (NULL, %s, %s, %s, %s)", (new_link, field_id, new_term, new_desc))
             count = cursor.lastrowid
             cnx.commit()
             cursor.execute("INSERT INTO `Concept_Content_Manager` (`id_m`, `block_id`, `concept_id`) VALUES (NULL, %s, %s)", (new_id, count))
@@ -141,9 +212,8 @@ class NewOneXBlock(XBlock):
         cnx.commit()
         cursor.close() 
         cnx.close()
-        #except mysql.connector.Error as err:
-            #new_id = "Something went wrong: {}".format(err)
-        return {"sparql_search" : new_term}    
+        
+        return {"new_term" : new_term, "new_desc":new_desc,"new_link":new_link}    
             
     # TO-DO: change this to create the scenarios you'd like to see in the
     # workbench while developing your XBlock.
@@ -162,3 +232,5 @@ class NewOneXBlock(XBlock):
                 </vertical_demo>
              """),
         ]
+
+    

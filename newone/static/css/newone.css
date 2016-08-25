@@ -4,13 +4,14 @@
     font-weight: bold;
 }
 
-.newone_block p {
+/*.newone_block p {
     cursor: pointer;
 }
+*/
 
        #search_advice_wrapper{
             display:none;
-            width: 350px;
+            width: 500px;
             background-color: rgb(80, 80, 114);
             color: rgb(255, 227, 189);
             -moz-opacity: 0.95;
@@ -38,3 +39,8 @@
             color:#FEFFBD;
             background-color:#818187;
         }
+.advice_link {
+	visibility: hidden;
+}
+
+
