@@ -35,32 +35,51 @@ find({"blocks.block_id" : "d8a6192ade314473a78242dfeedfbf5b", "blocks.block_type
 post = {"author": "Mike", "text": "My first blog post!", "tags": ["mongodb", "python", "pymongo"],"date": datetime.datetime.utcnow()}
 coll.insert(post)'''
 course_structure_array=[]
-course_structure = {}
+
 
 
 #Getting array of courses with their data
 for course_id in published_courses_array:
-    for whole_course_document in coll.find({"_id" : course_id}, {"blocks.fields.display_name":1, "blocks.fields.children":1,"blocks.block_type":1,"blocks.definition":1}):
+    for whole_course_document in coll.find({"_id" : course_id}, {"blocks.fields.display_name":1, "blocks.fields.children":1,"blocks.block_type":1,"blocks.definition":1,"blocks.block_id":1 }):
         for course_block in whole_course_document["blocks"]:
             if course_block["block_type"]=="course":
+                course_structure = {}
                 course_structure["course_chapters"]=[]
                 course_structure["course_id"]=course_block["definition"]
                 course_structure["course_name"]=course_block["fields"]["display_name"]
-                #print course_structure["course_name"]
-                #print json.dumps(course_block["fields"]["children"][0], sort_keys=True, indent=4, separators=(',', ': '))
-                for course_chapterss in course_block["fields"]["children"]:
-                    #print course_chapterss[1]
-                    course_structure["course_chapters"].append(course_chapterss[1])
-
-                    
-                    #print course_chapters
-                        #need to find chapter info by chapter id
-                        
-                        
+                for course_chapters in course_block["fields"]["children"]:
+                    chapter_structure1={}
+                    chapter_structure1["chapter_id"]=course_chapters[1]
+                    course_structure["course_chapters"].append(chapter_structure1)
                 course_structure_array.append(course_structure.copy())
-                #print course_structure["course_chapters"]
-print json.dumps(course_structure_array[2]["course_name"])
-print json.dumps(course_structure_array[3]["course_chapters"], sort_keys=True, indent=4, separators=(',', ': '))
+                print "--------------Next course-----------------"
+        for course_block in whole_course_document["blocks"]:
+            if course_block["block_type"]=="chapter":
+                for course in course_structure_array:
+                    for chapter in course["course_chapters"]:
+                        if course_block["block_id"] == chapter["chapter_id"]:
+                            
+                            print course_block["block_id"]
+                            print course_block["fields"]["display_name"]
+                            print course_block["fields"]["children"]
+                            #chapter.append(chapter_structure)
+
+
+            
+
+            '''for one in course_structure_array:
+                for two in one["course_chapters"]:
+                    if (course_block["block_type"]=="chapter") and (two==course_block["block_id"]): 
+                #print course_block["fields"]["display_name"]
+                        chapter_structure={}
+                        chapter_structure["chapter_sequentials"]=[]
+                        chapter_structure["chapter_id"]=course_block["block_id"]
+                        chapter_structure["chapter_name"]=course_block["fields"]["display_name"]
+                        print chapter_structure'''
+
+            #if course_block["block_type"]=="chapter":
+#print json.dumps(course_structure_array[0]["course_name"])
+#print json.dumps(course_structure_array[0]["course_chapters"], sort_keys=True, indent=4, separators=(',', ': '))
 
 
 

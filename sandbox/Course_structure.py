@@ -2,9 +2,9 @@ course
 {	"course_id": "first_id"
 	"course_name" : "Demo edx"
 	"course_chapters" : [
-					{
+					{ #chapter_structure
 					"chapter_id":"first_id"
-					"name": "chapter 1"
+					"chapter_name": "chapter 1"
 					"sequentials" : [
 										{
 										"sequential_id":"first_id"
