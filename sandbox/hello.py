@@ -45,7 +45,8 @@ for course_id in published_courses_array:
             if course_block["block_type"]=="course":
                 course_structure = {}
                 course_structure["course_chapters"]=[]
-                course_structure["course_id"]=course_block["definition"]
+                #!!!!!!!!!Narrow space, because block_id of course is "course", not objectID
+                course_structure["course_id"]=course_block["block_id"]
                 course_structure["course_name"]=course_block["fields"]["display_name"]
                 for course_chapters in course_block["fields"]["children"]:
                     chapter_structure1={}
@@ -58,10 +59,13 @@ for course_id in published_courses_array:
                 for course in course_structure_array:
                     for chapter in course["course_chapters"]:
                         if course_block["block_id"] == chapter["chapter_id"]:
-                            
-                            print course_block["block_id"]
-                            print course_block["fields"]["display_name"]
-                            print course_block["fields"]["children"]
+                            #print course_block["block_id"]
+                            chapter["chapter_name"]=course_block["fields"]["display_name"]
+                            chapter["sequentials"]=[]
+                            for chapter_sequentials in course_block["fields"]["children"]:
+                                chapter["sequentials"].append(chapter_sequentials[1])
+                            #print course_block["sequentials"]
+                        
                             #chapter.append(chapter_structure)
 
 
@@ -78,8 +82,8 @@ for course_id in published_courses_array:
                         print chapter_structure'''
 
             #if course_block["block_type"]=="chapter":
-#print json.dumps(course_structure_array[0]["course_name"])
-#print json.dumps(course_structure_array[0]["course_chapters"], sort_keys=True, indent=4, separators=(',', ': '))
+#print json.dumps(course_structure_array[1]["course_name"])
+print json.dumps(course_structure_array, sort_keys=True, indent=4, separators=(',', ': '))
 
 
 
