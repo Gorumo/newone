@@ -54,6 +54,7 @@ for course_id in published_courses_array:
                     course_structure["course_chapters"].append(chapter_structure1)
                 course_structure_array.append(course_structure.copy())
                 print "--------------Next course-----------------"
+        
         for course_block in whole_course_document["blocks"]:
             if course_block["block_type"]=="chapter":
                 for course in course_structure_array:
@@ -63,26 +64,44 @@ for course_id in published_courses_array:
                             chapter["chapter_name"]=course_block["fields"]["display_name"]
                             chapter["sequentials"]=[]
                             for chapter_sequentials in course_block["fields"]["children"]:
-                                chapter["sequentials"].append(chapter_sequentials[1])
-                            #print course_block["sequentials"]
-                        
-                            #chapter.append(chapter_structure)
+                                sequential_structure={}
+                                sequential_structure["sequential_id"]=chapter_sequentials[1]
+                                chapter["sequentials"].append(sequential_structure)
+
+        for course_block in whole_course_document["blocks"]:
+            if course_block["block_type"]=="sequential":
+                for course in course_structure_array:
+                    for chapter in course["course_chapters"]:
+                        for sequential in chapter["sequentials"]:
+                            if course_block["block_id"] == sequential["sequential_id"]:
+                                sequential["sequential_name"]=course_block["fields"]["display_name"]
+                                sequential["verticals"]=[]
+                                for sequential_verticals in course_block["fields"]["children"]:
+                                    vertical_structure={}
+                                    vertical_structure["vertical_id"]=sequential_verticals[1]
+                                    sequential["verticals"].append(vertical_structure)
+
+        for course_block in whole_course_document["blocks"]:
+            if course_block["block_type"]=="vertical":
+                for course in course_structure_array:
+                    for chapter in course["course_chapters"]:
+                        for sequential in chapter["sequentials"]:
+                            for vertical in sequential["verticals"]:
+                                if course_block["block_id"] == vertical["vertical_id"]:
+                                    vertical["vertical_name"]=course_block["fields"]["display_name"]
+                                    vertical["units"]=[]
+                                    for vertical_units in course_block["fields"]["children"]:
+                                        unit_structure={}
+                                        unit_structure["unit_type"]=vertical_units[0]
+                                        unit_structure["unit_id"]=vertical_units[1]
+                                        vertical["units"].append(unit_structure)
 
 
-            
 
-            '''for one in course_structure_array:
-                for two in one["course_chapters"]:
-                    if (course_block["block_type"]=="chapter") and (two==course_block["block_id"]): 
-                #print course_block["fields"]["display_name"]
-                        chapter_structure={}
-                        chapter_structure["chapter_sequentials"]=[]
-                        chapter_structure["chapter_id"]=course_block["block_id"]
-                        chapter_structure["chapter_name"]=course_block["fields"]["display_name"]
-                        print chapter_structure'''
 
-            #if course_block["block_type"]=="chapter":
-#print json.dumps(course_structure_array[1]["course_name"])
+
+
+
 print json.dumps(course_structure_array, sort_keys=True, indent=4, separators=(',', ': '))
 
 
