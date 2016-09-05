@@ -88,8 +88,11 @@ for course_id in published_courses_array:
                         for sequential in chapter["sequentials"]:
                             for vertical in sequential["verticals"]:
                                 if course_block["block_id"] == vertical["vertical_id"]:
-                                    vertical["vertical_name"]=course_block["fields"]["display_name"]
                                     vertical["units"]=[]
+                                    try:
+                                    	vertical["vertical_name"]=course_block["fields"]["display_name"]
+                                    except:
+                                    	print "There's no display_name in this vertical"
                                     for vertical_units in course_block["fields"]["children"]:
                                         unit_structure={}
                                         unit_structure["unit_type"]=vertical_units[0]
@@ -98,7 +101,9 @@ for course_id in published_courses_array:
 
 
 
-
+#5690cbf1457ebc0ba8429d4d - fail
+#5690d6a8457ebc0ba9429d52
+#5690d8ac457ebc0ba9429fb5
 
 
 
