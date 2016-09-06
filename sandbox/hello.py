@@ -1,4 +1,5 @@
 import pymongo
+import re
 from bson.objectid import ObjectId
 import json
 #Connection to MongoDB and DB & Collection choice
@@ -6,6 +7,7 @@ conn = pymongo.Connection('localhost', 27017)
 db = conn.edxapp
 coll = db.modulestore.structures
 published = db.modulestore.active_versions
+defin = db.modulestore.definitions
 
 #array of ObjectID of all active courses
 published_courses_array=[]
@@ -13,7 +15,7 @@ for published_courses in published.find({}):
     published_courses_array.append(published_courses["versions"]["published-branch"])
 #print published_courses_array
 
-
+definitions_array=[]
 
 #mongo query's
 ''' 
@@ -90,14 +92,25 @@ for course_id in published_courses_array:
                                 if course_block["block_id"] == vertical["vertical_id"]:
                                     vertical["units"]=[]
                                     try:
-                                    	vertical["vertical_name"]=course_block["fields"]["display_name"]
+                                        vertical["vertical_name"]=course_block["fields"]["display_name"]
                                     except:
-                                    	print "There's no display_name in this vertical"
+                                        print "There's no display_name in this vertical"
                                     for vertical_units in course_block["fields"]["children"]:
                                         unit_structure={}
                                         unit_structure["unit_type"]=vertical_units[0]
                                         unit_structure["unit_id"]=vertical_units[1]
                                         vertical["units"].append(unit_structure)
+                                        for units_content in whole_course_document["blocks"]:
+                                            if units_content["block_id"] == unit_structure["unit_id"] and units_content["block_type"] == "html":
+                                                #ObjectID for Content from definitions collection
+                                                for definitions in defin.find({"_id":ObjectId(units_content["definition"])}):
+                                                    try:
+                                                    	html_content=re.sub(r'(\<(/?[^>]+)>)', '', definitions["fields"]["data"])
+                                                    except:
+                                                        print "There's no data"
+
+
+                
 
 
 
@@ -107,19 +120,4 @@ for course_id in published_courses_array:
 
 
 
-print json.dumps(course_structure_array, sort_keys=True, indent=4, separators=(',', ': '))
-
-
-
-
-                
-
-
-
-
-
-
-
-
-
-
+#print json.dumps(course_structure_array, sort_keys=True, indent=4, separators=(',', ': '))
