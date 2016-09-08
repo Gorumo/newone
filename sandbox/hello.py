@@ -2,6 +2,13 @@ import pymongo
 import re
 from bson.objectid import ObjectId
 import json
+import MySQLdb
+sql_db = MySQLdb.connect(host="localhost",    
+                     user="root",        
+                     passwd="",  
+                     db="edxapp")   
+edxapp = sql_db.cursor()
+
 #Connection to MongoDB and DB & Collection choice
 conn = pymongo.Connection('localhost', 27017)
 db = conn.edxapp
@@ -25,10 +32,6 @@ find({"blocks.block_id" : "d8a6192ade314473a78242dfeedfbf5b", "blocks.block_type
  "blocks.definition":1})
 //db.getCollection('modulestore.structures').distinct("blocks.definition", {"blocks.block_id" : "d8a6192ade314473a78242dfeedfbf5b","blocks.block_type" : "course"})
 '''
-
-
-
-
 
 
 
@@ -99,15 +102,27 @@ for course_id in published_courses_array:
                                         unit_structure={}
                                         unit_structure["unit_type"]=vertical_units[0]
                                         unit_structure["unit_id"]=vertical_units[1]
-                                        vertical["units"].append(unit_structure)
                                         for units_content in whole_course_document["blocks"]:
                                             if units_content["block_id"] == unit_structure["unit_id"] and units_content["block_type"] == "html":
                                                 #ObjectID for Content from definitions collection
                                                 for definitions in defin.find({"_id":ObjectId(units_content["definition"])}):
                                                     try:
-                                                    	html_content=re.sub(r'(\<(/?[^>]+)>)', '', definitions["fields"]["data"])
+                                                        unit_structure["data"]=re.sub(r'(\<(/?[^>]+)>)', '', definitions["fields"]["data"]) 
                                                     except:
-                                                        print "There's no data"
+                                                        unit_structure["data"]=""
+                                                    vertical["units"].append(unit_structure)
+                                                                                                                                            #INSERT NAME OF XBLOCK!!!
+                                            if units_content["block_id"] == unit_structure["unit_id"] and units_content["block_type"] == "newone":
+                                                try:
+                                                    #unit_structure["data"]="xblock"
+                                                    edxapp.execute("SELECT value FROM courseware_xmoduleuserstatesummaryfield WHERE usage_id LIKE '%"+unit_structure["unit_id"]+"';")
+                                                    for row in edxapp.fetchall():
+                                                        unit_structure["data"]=row[0] 
+                                                except:
+                                                    unit_structure["data"]=""
+                                                vertical["units"].append(unit_structure)
+
+                                        
 
 
                 
@@ -120,4 +135,4 @@ for course_id in published_courses_array:
 
 
 
-#print json.dumps(course_structure_array, sort_keys=True, indent=4, separators=(',', ': '))
+print json.dumps(course_structure_array, sort_keys=True, indent=4, separators=(',', ': '))
