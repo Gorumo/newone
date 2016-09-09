@@ -1,0 +1,95 @@
+Для курса
+___________________________
+Вместо SomeCourse - его id
+
+<http://www.semanticweb.org/EdxOntology/Main#SomeCourse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+
+<http://www.semanticweb.org/EdxOntology/Main#SomeCourse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/EdxOntology/Main#Course> .
+
+<http://www.semanticweb.org/EdxOntology/Main#SomeCourse> <http://www.w3.org/2000/01/rdf-schema#label> "CourseName"@en .
+
+<http://www.semanticweb.org/EdxOntology/Main#SomeCourse> <http://www.semanticweb.org/EdxOntology/Main#consistsOf> <http://www.semanticweb.org/EdxOntology/Main#SomeSection> .
+
+
+Для секции
+__________________________
+Вместо SomeSection - ее id
+
+<http://www.semanticweb.org/EdxOntology/Main#SomeSection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+
+<http://www.semanticweb.org/EdxOntology/Main#SomeSection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/EdxOntology/Main#Sections> .
+
+<http://www.semanticweb.org/EdxOntology/Main#SomeSection> <http://www.w3.org/2000/01/rdf-schema#label> "SectionName"@en .
+
+<http://www.semanticweb.org/EdxOntology/Main#SomeSection> <http://www.semanticweb.org/EdxOntology/Main#consistsOf> <http://www.semanticweb.org/EdxOntology/Main#SomeSubsection> .
+
+
+Для подсекции
+_________________________
+Вместо SomeSubsection - ее id
+
+<http://www.semanticweb.org/EdxOntology/Main#SomeSubsection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+
+<http://www.semanticweb.org/EdxOntology/Main#SomeSubsection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/EdxOntology/Main#Subsections> .
+
+<http://www.semanticweb.org/EdxOntology/Main#SomeSubsection> <http://www.w3.org/2000/01/rdf-schema#label> "SubsectionName"@en .
+
+<http://www.semanticweb.org/EdxOntology/Main#SomeSubsection> <http://www.semanticweb.org/EdxOntology/Main#consistsOf> <http://www.semanticweb.org/EdxOntology/Main#SomeUnit> .
+
+Для юнита
+_________________________
+Вместо SomeUnit - его id
+
+
+<http://www.semanticweb.org/EdxOntology/Main#SomeUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+
+<http://www.semanticweb.org/EdxOntology/Main#SomeUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/EdxOntology/Main#Units> .
+
+<http://www.semanticweb.org/EdxOntology/Main#SomeUnit> <http://www.w3.org/2000/01/rdf-schema#label> "UnitName"@en .
+
+<http://www.semanticweb.org/EdxOntology/Main#SomeUnit> <http://www.semanticweb.org/EdxOntology/Main#consistsOf> <http://www.semanticweb.org/EdxOntology/Main#SomeHTML> .
+
+
+Для HTML
+_________________________
+Вместо SomeHTML - его id
+
+<http://www.semanticweb.org/EdxOntology/Main#SomeHTML> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+
+<http://www.semanticweb.org/EdxOntology/Main#SomeHTML> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/EdxOntology/Main#HTML> .
+
+<http://www.semanticweb.org/EdxOntology/Main#SomeHTML> <http://www.w3.org/2000/01/rdf-schema#label> "HTMLName"@en .
+
+<http://www.semanticweb.org/EdxOntology/Main#SomeHTML> <http://www.semanticweb.org/EdxOntology/Main#hasConcept> <http://www.semanticweb.org/EdxOntology/Main#vector> .
+
+<http://www.semanticweb.org/EdxOntology/Main#SomeHTML> <http://www.semanticweb.org/EdxOntology/Main#content> "Here should be the content of html" .
+
+Для концепта
+_________________________
+Вместо vector - его id
+
+<http://www.semanticweb.org/EdxOntology/Main#vector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+
+<http://www.semanticweb.org/EdxOntology/Main#vector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/EdxOntology/Main#Concept> .
+
+<http://www.semanticweb.org/EdxOntology/Main#vector> <http://www.w3.org/2000/01/rdf-schema#label> "Vector"@en .
+<http://www.semanticweb.org/EdxOntology/Main#vector> <http://www.w3.org/2000/01/rdf-schema#label> "\u00D0\u0092\u00D0\u00B5\u00D0\u00BA\u00D1\u0082\u00D0\u00BE\u00D1\u0080"@ru .
+
+<http://www.semanticweb.org/EdxOntology/Main#vector> <http://www.semanticweb.org/EdxOntology/Main#belongsField> <http://www.semanticweb.org/EdxOntology/Main#Math> .
+
+Для предметной области
+_________________________
+Вместо Math - его id
+
+<http://www.semanticweb.org/EdxOntology/Main#Math> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+
+<http://www.semanticweb.org/EdxOntology/Main#Math> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/EdxOntology/Main#Field> .
+
+<http://www.semanticweb.org/EdxOntology/Main#Math> <http://www.w3.org/2000/01/rdf-schema#label> "FieldName"@en .
+
+<http://www.semanticweb.org/EdxOntology/Main#Math> <http://www.semanticweb.org/EdxOntology/Main#hasConcept> <http://www.semanticweb.org/EdxOntology/Main#vector> .
+
+
+
+
+

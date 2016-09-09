@@ -1,0 +1,159 @@
+<http://www.semanticweb.org/EdxOntology/Main> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.semanticweb.org/EdxOntology/Main#belongsField> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/EdxOntology/Main#belongsField> <http://www.w3.org/2000/01/rdf-schema#label> "Concept belongs to field"@en .
+<http://www.semanticweb.org/EdxOntology/Main#belongsField> <http://www.w3.org/2000/01/rdf-schema#label> "\u00D0\u009A\u00D0\u00BE\u00D0\u00BD\u00D0\u00B5\u00D1\u0086\u00D0\u00B5\u00D0\u00BF\u00D1\u0082 \u00D0\u00BF\u00D1\u0080\u00D0\u00B8\u00D0\u00BD\u00D0\u00B0\u00D0\u00B4\u00D0\u00BB\u00D0\u00B5\u00D0\u00B6\u00D0\u00B8\u00D1\u0082 \u00D0\u00BF\u00D1\u0080\u00D0\u00B5\u00D0\u00B4\u00D0\u00BC\u00D0\u00B5\u00D1\u0082\u00D0\u00BD\u00D0\u00BE\u00D0\u00B9 \u00D0\u00BE\u00D0\u00B1\u00D0\u00BB\u00D0\u00B0\u00D1\u0081\u00D1\u0082\u00D0\u00B8"@ru .
+<http://www.semanticweb.org/EdxOntology/Main#belongsField> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/EdxOntology/Main#Concept> .
+<http://www.semanticweb.org/EdxOntology/Main#belongsField> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/EdxOntology/Main#Field> .
+<http://www.semanticweb.org/EdxOntology/Main#compose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/EdxOntology/Main#compose> <http://www.w3.org/2000/01/rdf-schema#label> "Compose"@en .
+<http://www.semanticweb.org/EdxOntology/Main#compose> <http://www.w3.org/2000/01/rdf-schema#label> "\u00D0\u00A1\u00D0\u00BE\u00D1\u0081\u00D1\u0082\u00D0\u00B0\u00D0\u00B2\u00D0\u00BB\u00D1\u008F\u00D1\u008E\u00D1\u0082"@ru .
+<http://www.semanticweb.org/EdxOntology/Main#compose> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/EdxOntology/Main#Course> .
+<http://www.semanticweb.org/EdxOntology/Main#compose> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/EdxOntology/Main#HTML> .
+<http://www.semanticweb.org/EdxOntology/Main#compose> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/EdxOntology/Main#Problem> .
+<http://www.semanticweb.org/EdxOntology/Main#compose> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/EdxOntology/Main#Sections> .
+<http://www.semanticweb.org/EdxOntology/Main#compose> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/EdxOntology/Main#Video> .
+<http://www.semanticweb.org/EdxOntology/Main#compose> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/EdxOntology/Main#Sections> .
+<http://www.semanticweb.org/EdxOntology/Main#compose> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/EdxOntology/Main#Subsections> .
+<http://www.semanticweb.org/EdxOntology/Main#compose> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/EdxOntology/Main#Units> .
+<http://www.semanticweb.org/EdxOntology/Main#compose> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/EdxOntology/Main#consistsOf> .
+<http://www.semanticweb.org/EdxOntology/Main#consistsOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/EdxOntology/Main#consistsOf> <http://www.w3.org/2000/01/rdf-schema#label> "Consists of"@en .
+<http://www.semanticweb.org/EdxOntology/Main#consistsOf> <http://www.w3.org/2000/01/rdf-schema#label> "\u00D0\u00A1\u00D0\u00BE\u00D1\u0081\u00D1\u0082\u00D0\u00BE\u00D0\u00B8\u00D1\u0082 \u00D0\u00B8\u00D0\u00B7"@ru .
+<http://www.semanticweb.org/EdxOntology/Main#creates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/EdxOntology/Main#creates> <http://www.w3.org/2000/01/rdf-schema#label> "Creates"@en .
+<http://www.semanticweb.org/EdxOntology/Main#creates> <http://www.w3.org/2000/01/rdf-schema#label> "\u00D0\u00A1\u00D0\u00BE\u00D0\u00B7\u00D0\u00B4\u00D0\u00B0\u00D0\u00B5\u00D1\u0082"@ru .
+<http://www.semanticweb.org/EdxOntology/Main#creates> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/EdxOntology/Main#Course> .
+<http://www.semanticweb.org/EdxOntology/Main#creates> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/EdxOntology/Main#Teacher> .
+<http://www.semanticweb.org/EdxOntology/Main#creates> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/EdxOntology/Main#isMadeBy> .
+<http://www.semanticweb.org/EdxOntology/Main#hasConcept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/EdxOntology/Main#hasConcept> <http://www.w3.org/2000/01/rdf-schema#label> "Has concept"@en .
+<http://www.semanticweb.org/EdxOntology/Main#hasConcept> <http://www.w3.org/2000/01/rdf-schema#label> "\u00D0\u00A1\u00D0\u00BE\u00D0\u00B4\u00D0\u00B5\u00D1\u0080\u00D0\u00B6\u00D0\u00B8\u00D1\u0082 \u00D0\u00BA\u00D0\u00BE\u00D0\u00BD\u00D1\u0086\u00D0\u00B5\u00D0\u00BF\u00D1\u0082"@ru .
+<http://www.semanticweb.org/EdxOntology/Main#hasConcept> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/EdxOntology/Main#Concept> .
+<http://www.semanticweb.org/EdxOntology/Main#hasConcept> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/EdxOntology/Main#HTML> .
+<http://www.semanticweb.org/EdxOntology/Main#hasConcept> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/EdxOntology/Main#Problem> .
+<http://www.semanticweb.org/EdxOntology/Main#hasConcept> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/EdxOntology/Main#Video> .
+<http://www.semanticweb.org/EdxOntology/Main#isContainedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/EdxOntology/Main#isContainedIn> <http://www.w3.org/2000/01/rdf-schema#label> "Is contained in"@en .
+<http://www.semanticweb.org/EdxOntology/Main#isContainedIn> <http://www.w3.org/2000/01/rdf-schema#label> "\u00D0\u00A1\u00D0\u00BE\u00D0\u00B4\u00D0\u00B5\u00D1\u0080\u00D0\u00B6\u00D0\u00B8\u00D1\u0082\u00D1\u0081\u00D1\u008F"@ru .
+<http://www.semanticweb.org/EdxOntology/Main#isContainedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/EdxOntology/Main#Concept> .
+<http://www.semanticweb.org/EdxOntology/Main#isContainedIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/EdxOntology/Main#HTML> .
+<http://www.semanticweb.org/EdxOntology/Main#isContainedIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/EdxOntology/Main#Problem> .
+<http://www.semanticweb.org/EdxOntology/Main#isContainedIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/EdxOntology/Main#Video> .
+<http://www.semanticweb.org/EdxOntology/Main#isContainedIn> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/EdxOntology/Main#hasConcept> .
+<http://www.semanticweb.org/EdxOntology/Main#isMadeBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/EdxOntology/Main#isMadeBy> <http://www.w3.org/2000/01/rdf-schema#label> "Is made by"@en .
+<http://www.semanticweb.org/EdxOntology/Main#isMadeBy> <http://www.w3.org/2000/01/rdf-schema#label> "\u00D0\u00A1\u00D0\u00BE\u00D0\u00B7\u00D0\u00B4\u00D0\u00B0\u00D0\u00BD"@ru .
+<http://www.semanticweb.org/EdxOntology/Main#isMadeBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/EdxOntology/Main#Course> .
+<http://www.semanticweb.org/EdxOntology/Main#isMadeBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/EdxOntology/Main#Teacher> .
+<http://www.semanticweb.org/EdxOntology/Main#isSupportedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/EdxOntology/Main#isSupportedBy> <http://www.w3.org/2000/01/rdf-schema#label> "Is supported by"@en .
+<http://www.semanticweb.org/EdxOntology/Main#isSupportedBy> <http://www.w3.org/2000/01/rdf-schema#label> "\u00D0\u009F\u00D0\u00BE\u00D0\u00B4\u00D0\u00B4\u00D0\u00B5\u00D1\u0080\u00D0\u00B6\u00D0\u00B8\u00D0\u00B2\u00D0\u00B0\u00D0\u00B5\u00D1\u0082\u00D1\u0081\u00D1\u008F"@ru .
+<http://www.semanticweb.org/EdxOntology/Main#isSupportedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/EdxOntology/Main#Course> .
+<http://www.semanticweb.org/EdxOntology/Main#isSupportedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/EdxOntology/Main#Staff> .
+<http://www.semanticweb.org/EdxOntology/Main#isSupportedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/EdxOntology/Main#Teacher> .
+<http://www.semanticweb.org/EdxOntology/Main#isTakenBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/EdxOntology/Main#isTakenBy> <http://www.w3.org/2000/01/rdf-schema#label> "Is taken by"@en .
+<http://www.semanticweb.org/EdxOntology/Main#isTakenBy> <http://www.w3.org/2000/01/rdf-schema#label> "\u00D0\u0092\u00D0\u00B7\u00D1\u008F\u00D1\u0082"@ru .
+<http://www.semanticweb.org/EdxOntology/Main#isTakenBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/EdxOntology/Main#Course> .
+<http://www.semanticweb.org/EdxOntology/Main#isTakenBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/EdxOntology/Main#Student> .
+<http://www.semanticweb.org/EdxOntology/Main#support> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/EdxOntology/Main#support> <http://www.w3.org/2000/01/rdf-schema#label> "Support"@en .
+<http://www.semanticweb.org/EdxOntology/Main#support> <http://www.w3.org/2000/01/rdf-schema#label> "\u00D0\u009F\u00D0\u00BE\u00D0\u00B4\u00D0\u00B4\u00D0\u00B5\u00D1\u0080\u00D0\u00B6\u00D0\u00B8\u00D0\u00B2\u00D0\u00B0\u00D0\u00B5\u00D1\u0082"@ru .
+<http://www.semanticweb.org/EdxOntology/Main#support> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/EdxOntology/Main#Course> .
+<http://www.semanticweb.org/EdxOntology/Main#support> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/EdxOntology/Main#Staff> .
+<http://www.semanticweb.org/EdxOntology/Main#support> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/EdxOntology/Main#Teacher> .
+<http://www.semanticweb.org/EdxOntology/Main#support> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/EdxOntology/Main#isSupportedBy> .
+<http://www.semanticweb.org/EdxOntology/Main#takes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/EdxOntology/Main#takes> <http://www.w3.org/2000/01/rdf-schema#label> "Takes"@en .
+<http://www.semanticweb.org/EdxOntology/Main#takes> <http://www.w3.org/2000/01/rdf-schema#label> "\u00D0\u0091\u00D0\u00B5\u00D1\u0080\u00D0\u00B5\u00D1\u0082"@ru .
+<http://www.semanticweb.org/EdxOntology/Main#takes> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/EdxOntology/Main#Course> .
+<http://www.semanticweb.org/EdxOntology/Main#takes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/EdxOntology/Main#Student> .
+<http://www.semanticweb.org/EdxOntology/Main#takes> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/EdxOntology/Main#isTakenBy> .
+<http://www.semanticweb.org/EdxOntology/Main#attempts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/EdxOntology/Main#attempts> <http://www.w3.org/2000/01/rdf-schema#label> "Attempts"@en .
+<http://www.semanticweb.org/EdxOntology/Main#attempts> <http://www.w3.org/2000/01/rdf-schema#label> "\u00D0\u009F\u00D0\u00BE\u00D0\u00BF\u00D1\u008B\u00D1\u0082\u00D0\u00BA\u00D0\u00B8"@ru .
+<http://www.semanticweb.org/EdxOntology/Main#attempts> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/EdxOntology/Main#Problem> .
+<http://www.semanticweb.org/EdxOntology/Main#attempts> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<http://www.semanticweb.org/EdxOntology/Main#content> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/EdxOntology/Main#content> <http://www.w3.org/2000/01/rdf-schema#label> "HTML content"@en .
+<http://www.semanticweb.org/EdxOntology/Main#content> <http://www.w3.org/2000/01/rdf-schema#label> "HTML \u00D0\u00BA\u00D0\u00BE\u00D0\u00BD\u00D1\u0082\u00D0\u00B5\u00D0\u00BD\u00D1\u0082"@ru .
+<http://www.semanticweb.org/EdxOntology/Main#content> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/EdxOntology/Main#HTML> .
+<http://www.semanticweb.org/EdxOntology/Main#content> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/EdxOntology/Main#courseImage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/EdxOntology/Main#courseImage> <http://www.w3.org/2000/01/rdf-schema#label> "Course Image"@en .
+<http://www.semanticweb.org/EdxOntology/Main#courseImage> <http://www.w3.org/2000/01/rdf-schema#label> "\u00D0\u0098\u00D0\u00B7\u00D0\u00BE\u00D0\u00B1\u00D1\u0080\u00D0\u00B0\u00D0\u00B6\u00D0\u00B5\u00D0\u00BD\u00D0\u00B8\u00D0\u00B5 \u00D0\u00BA\u00D1\u0083\u00D1\u0080\u00D1\u0081\u00D0\u00B0"@ru .
+<http://www.semanticweb.org/EdxOntology/Main#courseImage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/EdxOntology/Main#Course> .
+<http://www.semanticweb.org/EdxOntology/Main#courseImage> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/EdxOntology/Main#overwiev> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/EdxOntology/Main#overwiev> <http://www.w3.org/2000/01/rdf-schema#label> "Course overview"@en .
+<http://www.semanticweb.org/EdxOntology/Main#overwiev> <http://www.w3.org/2000/01/rdf-schema#label> "\u00D0\u009A\u00D1\u0080\u00D0\u00B0\u00D1\u0082\u00D0\u00BA\u00D0\u00BE\u00D0\u00B5 \u00D0\u00BE\u00D0\u00BF\u00D0\u00B8\u00D1\u0081\u00D0\u00B0\u00D0\u00BD\u00D0\u00B8\u00D0\u00B5 \u00D0\u00BA\u00D1\u0083\u00D1\u0080\u00D1\u0081\u00D0\u00B0"@ru .
+<http://www.semanticweb.org/EdxOntology/Main#overwiev> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/EdxOntology/Main#Course> .
+<http://www.semanticweb.org/EdxOntology/Main#overwiev> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/EdxOntology/Main#source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/EdxOntology/Main#source> <http://www.w3.org/2000/01/rdf-schema#label> "Source the video is from"@en .
+<http://www.semanticweb.org/EdxOntology/Main#source> <http://www.w3.org/2000/01/rdf-schema#label> "\u00D0\u0098\u00D1\u0081\u00D1\u0082\u00D0\u00BE\u00D1\u0087\u00D0\u00BD\u00D0\u00B8\u00D0\u00BA \u00D0\u00B2\u00D0\u00B8\u00D0\u00B4\u00D0\u00B5\u00D0\u00BE"@ru .
+<http://www.semanticweb.org/EdxOntology/Main#source> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/EdxOntology/Main#Video> .
+<http://www.semanticweb.org/EdxOntology/Main#source> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.semanticweb.org/EdxOntology/Main#transcript> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/EdxOntology/Main#transcript> <http://www.w3.org/2000/01/rdf-schema#label> "Transcript or subtitles"@en .
+<http://www.semanticweb.org/EdxOntology/Main#transcript> <http://www.w3.org/2000/01/rdf-schema#label> "\u00D0\u00A1\u00D1\u0083\u00D0\u00B1\u00D1\u0082\u00D0\u00B8\u00D1\u0082\u00D1\u0080\u00D1\u008B"@ru .
+<http://www.semanticweb.org/EdxOntology/Main#transcript> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/EdxOntology/Main#Video> .
+<http://www.semanticweb.org/EdxOntology/Main#transcript> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://linkedscience.org/teach/ns#Course> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://linkedscience.org/teach/ns#Course> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.semanticweb.org/EdxOntology/Main#Course> .
+<http://linkedscience.org/teach/ns#Student> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://linkedscience.org/teach/ns#Student> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.semanticweb.org/EdxOntology/Main#Student> .
+<http://linkedscience.org/teach/ns#Teacher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://linkedscience.org/teach/ns#Teacher> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.semanticweb.org/EdxOntology/Main#Teacher> .
+<http://purl.org/vocab/aiiso/schema#Course> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vocab/aiiso/schema#Course> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.semanticweb.org/EdxOntology/Main#Course> .
+<http://www.semanticweb.org/EdxOntology/Main#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/EdxOntology/Main#Concept> <http://www.w3.org/2000/01/rdf-schema#label> "Term"@en .
+<http://www.semanticweb.org/EdxOntology/Main#Concept> <http://www.w3.org/2000/01/rdf-schema#label> "\u00D0\u00A2\u00D0\u00B5\u00D1\u0080\u00D0\u00BC\u00D0\u00B8\u00D0\u00BD"@ru .
+<http://www.semanticweb.org/EdxOntology/Main#Course> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/EdxOntology/Main#Course> <http://www.w3.org/2000/01/rdf-schema#label> "Course"@en .
+<http://www.semanticweb.org/EdxOntology/Main#Course> <http://www.w3.org/2000/01/rdf-schema#label> "\u00D0\u009A\u00D1\u0083\u00D1\u0080\u00D1\u0081"@ru .
+<http://www.semanticweb.org/EdxOntology/Main#Field> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/EdxOntology/Main#Field> <http://www.w3.org/2000/01/rdf-schema#label> "Field"@en .
+<http://www.semanticweb.org/EdxOntology/Main#Field> <http://www.w3.org/2000/01/rdf-schema#label> "\u00D0\u009E\u00D0\u00B1\u00D0\u00BB\u00D0\u00B0\u00D1\u0081\u00D1\u0082\u00D1\u008C"@ru .
+<http://www.semanticweb.org/EdxOntology/Main#HTML> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/EdxOntology/Main#HTML> <http://www.w3.org/2000/01/rdf-schema#label> "HTML"@en .
+<http://www.semanticweb.org/EdxOntology/Main#HTML> <http://www.w3.org/2000/01/rdf-schema#label> "HTML"@ru .
+<http://www.semanticweb.org/EdxOntology/Main#HTML> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/EdxOntology/Main#Units> .
+<http://www.semanticweb.org/EdxOntology/Main#Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/EdxOntology/Main#Person> <http://www.w3.org/2000/01/rdf-schema#label> "Person"@en .
+<http://www.semanticweb.org/EdxOntology/Main#Person> <http://www.w3.org/2000/01/rdf-schema#label> "\u00D0\u0094\u00D0\u00B5\u00D0\u00B9\u00D1\u0081\u00D1\u0082\u00D0\u00B2\u00D1\u0083\u00D1\u008E\u00D1\u0089\u00D0\u00B5\u00D0\u00B5 \u00D0\u00BB\u00D0\u00B8\u00D1\u0086\u00D0\u00BE"@ru .
+<http://www.semanticweb.org/EdxOntology/Main#Person> <http://www.w3.org/2002/07/owl#equivalentClass> <http://xmlns.com/foaf/0.1/Person> .
+<http://www.semanticweb.org/EdxOntology/Main#Problem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/EdxOntology/Main#Problem> <http://www.w3.org/2000/01/rdf-schema#label> "Problem"@en .
+<http://www.semanticweb.org/EdxOntology/Main#Problem> <http://www.w3.org/2000/01/rdf-schema#label> "\u00D0\u0097\u00D0\u00B0\u00D0\u00B4\u00D0\u00B0\u00D1\u0087\u00D0\u00B0"@ru .
+<http://www.semanticweb.org/EdxOntology/Main#Problem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/EdxOntology/Main#Units> .
+<http://www.semanticweb.org/EdxOntology/Main#Sections> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/EdxOntology/Main#Sections> <http://www.w3.org/2000/01/rdf-schema#label> "Sections"@en .
+<http://www.semanticweb.org/EdxOntology/Main#Sections> <http://www.w3.org/2000/01/rdf-schema#label> "\u00D0\u00A0\u00D0\u00B0\u00D0\u00B7\u00D0\u00B4\u00D0\u00B5\u00D0\u00BB\u00D1\u008B"@ru .
+<http://www.semanticweb.org/EdxOntology/Main#Sections> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/EdxOntology/Main#Course> .
+<http://www.semanticweb.org/EdxOntology/Main#Staff> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/EdxOntology/Main#Staff> <http://www.w3.org/2000/01/rdf-schema#label> "Staff"@en .
+<http://www.semanticweb.org/EdxOntology/Main#Staff> <http://www.w3.org/2000/01/rdf-schema#label> "\u00D0\u00A1\u00D0\u00BE\u00D1\u0082\u00D1\u0080\u00D1\u0083\u00D0\u00B4\u00D0\u00BD\u00D0\u00B8\u00D0\u00BA"@ru .
+<http://www.semanticweb.org/EdxOntology/Main#Staff> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/EdxOntology/Main#Person> .
+<http://www.semanticweb.org/EdxOntology/Main#Student> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/EdxOntology/Main#Student> <http://www.w3.org/2000/01/rdf-schema#label> "Student"@en .
+<http://www.semanticweb.org/EdxOntology/Main#Student> <http://www.w3.org/2000/01/rdf-schema#label> "\u00D0\u00A1\u00D1\u0082\u00D1\u0083\u00D0\u00B4\u00D0\u00B5\u00D0\u00BD\u00D1\u0082"@ru .
+<http://www.semanticweb.org/EdxOntology/Main#Student> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/EdxOntology/Main#Person> .
+<http://www.semanticweb.org/EdxOntology/Main#Subsections> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/EdxOntology/Main#Subsections> <http://www.w3.org/2000/01/rdf-schema#label> "Subsections"@en .
+<http://www.semanticweb.org/EdxOntology/Main#Subsections> <http://www.w3.org/2000/01/rdf-schema#label> "\u00D0\u009F\u00D0\u00BE\u00D0\u00B4\u00D1\u0080\u00D0\u00B0\u00D0\u00B7\u00D0\u00B4\u00D0\u00B5\u00D0\u00BB\u00D1\u008B"@ru .
+<http://www.semanticweb.org/EdxOntology/Main#Subsections> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/EdxOntology/Main#Sections> .
+<http://www.semanticweb.org/EdxOntology/Main#Teacher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/EdxOntology/Main#Teacher> <http://www.w3.org/2000/01/rdf-schema#label> "Teacher"@en .
+<http://www.semanticweb.org/EdxOntology/Main#Teacher> <http://www.w3.org/2000/01/rdf-schema#label> "\u00D0\u009F\u00D1\u0080\u00D0\u00B5\u00D0\u00BF\u00D0\u00BE\u00D0\u00B4\u00D0\u00B0\u00D0\u00B2\u00D0\u00B0\u00D1\u0082\u00D0\u00B5\u00D0\u00BB\u00D1\u008C"@ru .
+<http://www.semanticweb.org/EdxOntology/Main#Teacher> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/EdxOntology/Main#Person> .
+<http://www.semanticweb.org/EdxOntology/Main#Units> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/EdxOntology/Main#Units> <http://www.w3.org/2000/01/rdf-schema#label> "Units"@en .
+<http://www.semanticweb.org/EdxOntology/Main#Units> <http://www.w3.org/2000/01/rdf-schema#label> "\u00D0\u0091\u00D0\u00BB\u00D0\u00BE\u00D0\u00BA\u00D0\u00B8"@ru .
+<http://www.semanticweb.org/EdxOntology/Main#Units> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/EdxOntology/Main#Subsections> .
+<http://www.semanticweb.org/EdxOntology/Main#Video> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/EdxOntology/Main#Video> <http://www.w3.org/2000/01/rdf-schema#label> "Video"@en .
+<http://www.semanticweb.org/EdxOntology/Main#Video> <http://www.w3.org/2000/01/rdf-schema#label> "\u00D0\u0092\u00D0\u00B8\u00D0\u00B4\u00D0\u00B5\u00D0\u00BE"@ru .
+<http://www.semanticweb.org/EdxOntology/Main#Video> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/EdxOntology/Main#Units> .
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
