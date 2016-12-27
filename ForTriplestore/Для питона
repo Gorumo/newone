@@ -75,20 +75,23 @@ _________________________
 <http://www.semanticweb.org/EdxOntology/Main#vector> <http://www.w3.org/2000/01/rdf-schema#label> "Vector"@en .
 <http://www.semanticweb.org/EdxOntology/Main#vector> <http://www.w3.org/2000/01/rdf-schema#label> "\u00D0\u0092\u00D0\u00B5\u00D0\u00BA\u00D1\u0082\u00D0\u00BE\u00D1\u0080"@ru .
 
-<http://www.semanticweb.org/EdxOntology/Main#vector> <http://www.semanticweb.org/EdxOntology/Main#belongsField> <http://www.semanticweb.org/EdxOntology/Main#Math> .
+<http://www.semanticweb.org/EdxOntology/Main#vector> <http://www.semanticweb.org/EdxOntology/Main#belongsDomain> <http://www.semanticweb.org/EdxOntology/Main#Math> .
 
 Для предметной области
 _________________________
-Вместо Math - его id
+Вместо Math - его id, вместо vector - его id
 
 <http://www.semanticweb.org/EdxOntology/Main#Math> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 
-<http://www.semanticweb.org/EdxOntology/Main#Math> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/EdxOntology/Main#Field> .
+<http://www.semanticweb.org/EdxOntology/Main#Math> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/EdxOntology/Main#Domain> .
 
-<http://www.semanticweb.org/EdxOntology/Main#Math> <http://www.w3.org/2000/01/rdf-schema#label> "FieldName"@en .
+<http://www.semanticweb.org/EdxOntology/Main#Math> <http://www.w3.org/2000/01/rdf-schema#label> "DomainName"@en .
 
 <http://www.semanticweb.org/EdxOntology/Main#Math> <http://www.semanticweb.org/EdxOntology/Main#hasConcept> <http://www.semanticweb.org/EdxOntology/Main#vector> .
 
+
+Для Кандидата
+_________________________
 
 
 
