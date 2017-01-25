@@ -1,0 +1,42 @@
+
+Вывод всех концептов курса с группировкой по курсу
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX Main: <http://www.semanticweb.org/EdxOntology/Main#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+select ?course ?concept
+where { ?course rdf:type Main:Course.
+        ?course Main:consistsOf ?chapters.
+		?chapters Main:consistsOf ?seq.
+		?seq Main:consistsOf ?vertical.
+		?vertical Main:consistsOf ?unit.
+		?unit Main:hasConcept ?concept}
+order by ?course
+
+
+Вывод количества различных концептов 1 курса
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX Main: <http://www.semanticweb.org/EdxOntology/Main#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+select (COUNT(DISTINCT ?concept) AS ?count)
+where { <http://www.semanticweb.org/EdxOntology/Main#5690cbf1457ebc0ba8429d4d> Main:consistsOf ?chapters.
+		?chapters Main:consistsOf ?seq.
+		?seq Main:consistsOf ?vertical.
+		?vertical Main:consistsOf ?unit.
+		?unit Main:hasConcept ?concept}
+
+
+Количество уникальных концептов используемых в курсах и кол-во концептов
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX Main: <http://www.semanticweb.org/EdxOntology/Main#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+select ?label (COUNT(DISTINCT ?concept) AS ?uniq) (COUNT(?concept) AS ?all) 
+where { ?course Main:consistsOf ?chapters.
+		?chapters Main:consistsOf ?seq.
+		?seq Main:consistsOf ?vertical.
+		?vertical Main:consistsOf ?unit.
+		?unit Main:hasConcept ?concept.
+		?course rdfs:label ?label}
+group by ?label
+
