@@ -10,14 +10,14 @@
 ]>
 
 
-<rdf:RDF xmlns="http://www.semanticweb.org/EdxOntology/Main#"
-     xml:base="http://www.semanticweb.org/EdxOntology/Main"
+<rdf:RDF xmlns="http://www.semanticweb.org/EdxOntology/Sceleton#"
+     xml:base="http://www.semanticweb.org/EdxOntology/Sceleton"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:Main="http://www.semanticweb.org/EdxOntology/Main#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/EdxOntology/Main"/>
+    <owl:Ontology rdf:about="http://www.semanticweb.org/EdxOntology/Sceleton"/>
     
 
 
@@ -425,6 +425,7 @@
         <rdf:type rdf:resource="http://linkedscience.org/teach/ns#Course"/>
         <rdf:type rdf:resource="http://purl.org/vocab/aiiso/schema#Course"/>
         <rdf:type rdf:resource="&Main;Course"/>
+        <rdf:type rdf:resource="&Main;Domain_knowledge"/>
         <rdf:type rdf:resource="&Main;HTML"/>
         <rdf:type rdf:resource="&Main;Problem"/>
         <rdf:type rdf:resource="&Main;Sections"/>
@@ -432,7 +433,7 @@
         <rdf:type rdf:resource="&Main;Units"/>
         <rdf:type rdf:resource="&Main;Video"/>
         <rdfs:label xml:lang="en">Domain name</rdfs:label>
-        <hasConcept rdf:resource="&Main;vector"/>
+        <Main:hasConcept rdf:resource="&Main;vector"/>
     </owl:NamedIndividual>
     
 
@@ -450,7 +451,7 @@
         <rdf:type rdf:resource="&Main;Units"/>
         <rdf:type rdf:resource="&Main;Video"/>
         <rdfs:label xml:lang="en">CourseName</rdfs:label>
-        <consistsOf rdf:resource="&Main;SomeSection"/>
+        <Main:consistsOf rdf:resource="&Main;SomeSection"/>
     </owl:NamedIndividual>
     
 
@@ -468,8 +469,8 @@
         <rdf:type rdf:resource="&Main;Units"/>
         <rdf:type rdf:resource="&Main;Video"/>
         <rdfs:label xml:lang="en">HTMLName</rdfs:label>
-        <compose rdf:resource="&Main;SomeUnit"/>
-        <hasConcept rdf:resource="&Main;vector"/>
+        <Main:compose rdf:resource="&Main;SomeUnit"/>
+        <Main:hasConcept rdf:resource="&Main;vector"/>
     </owl:NamedIndividual>
     
 
@@ -501,8 +502,8 @@
         <rdf:type rdf:resource="&Main;Units"/>
         <rdf:type rdf:resource="&Main;Video"/>
         <rdfs:label xml:lang="en">SectionName</rdfs:label>
-        <compose rdf:resource="&Main;SomeCourse"/>
-        <consistsOf rdf:resource="&Main;SomeSubsection"/>
+        <Main:compose rdf:resource="&Main;SomeCourse"/>
+        <Main:consistsOf rdf:resource="&Main;SomeSubsection"/>
     </owl:NamedIndividual>
     
 
@@ -520,8 +521,8 @@
         <rdf:type rdf:resource="&Main;Units"/>
         <rdf:type rdf:resource="&Main;Video"/>
         <rdfs:label xml:lang="en">SubsectionName</rdfs:label>
-        <compose rdf:resource="&Main;SomeSection"/>
-        <consistsOf rdf:resource="&Main;SomeUnit"/>
+        <Main:compose rdf:resource="&Main;SomeSection"/>
+        <Main:consistsOf rdf:resource="&Main;SomeUnit"/>
     </owl:NamedIndividual>
     
 
@@ -539,8 +540,8 @@
         <rdf:type rdf:resource="&Main;Units"/>
         <rdf:type rdf:resource="&Main;Video"/>
         <rdfs:label xml:lang="en">UnitName</rdfs:label>
-        <consistsOf rdf:resource="&Main;SomeHTML"/>
-        <compose rdf:resource="&Main;SomeSubsection"/>
+        <Main:consistsOf rdf:resource="&Main;SomeHTML"/>
+        <Main:compose rdf:resource="&Main;SomeSubsection"/>
     </owl:NamedIndividual>
     
 
@@ -564,9 +565,9 @@
     <owl:NamedIndividual rdf:about="&Main;vector">
         <rdf:type rdf:resource="&Main;Concept"/>
         <rdfs:label xml:lang="en">Vector</rdfs:label>
-        <belongsDomain rdf:resource="&Main;Math"/>
-        <isContainedIn rdf:resource="&Main;Math"/>
-        <isContainedIn rdf:resource="&Main;SomeHTML"/>
+        <Main:belongsDomain rdf:resource="&Main;Math"/>
+        <Main:isContainedIn rdf:resource="&Main;Math"/>
+        <Main:isContainedIn rdf:resource="&Main;SomeHTML"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 

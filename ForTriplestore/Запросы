@@ -21,13 +21,14 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX Main: <http://www.semanticweb.org/EdxOntology/Main#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 select ?label (COUNT(DISTINCT ?concept) AS ?count)
-where { <http://www.semanticweb.org/EdxOntology/Main#5690cbf1457ebc0ba8429d4d> Main:consistsOf ?chapters.
-  <http://www.semanticweb.org/EdxOntology/Main#5690cbf1457ebc0ba8429d4d> rdfs:label ?label.
+where { ?course Main:consistsOf ?chapters.
+  ?course rdfs:label ?label.
 		?chapters Main:consistsOf ?seq.
 		?seq Main:consistsOf ?vertical.
 		?vertical Main:consistsOf ?unit.
 		?unit Main:hasConcept ?concept}
 GROUP BY ?label
+
 
 
 Количество уникальных концептов используемых в курсах и кол-во концептов
@@ -40,7 +41,7 @@ where { ?course Main:consistsOf ?chapters.
 		?chapters Main:consistsOf ?seq.
 		?seq Main:consistsOf ?vertical.
 		?vertical Main:consistsOf ?unit.
-		?unit Main:hasConcept ?concept.
+		?unit Main:hasConceptCandidate ?concept.
 		?course rdfs:label ?label}
 group by ?label
 
@@ -90,7 +91,7 @@ where { ?course rdf:type <http://www.semanticweb.org/EdxOntology/Main#Course>.
 		?chapters Main:consistsOf ?seq.
 		?seq Main:consistsOf ?vertical.
 		?vertical Main:consistsOf ?unit.
-		?unit Main:hasConcept ?concept.
+		?unit Main:hasConceptCandidate ?concept.
   		?vertical rdfs:label ?vertical_label.
   		?seq rdfs:label ?seq_label.
 		?chapters rdfs:label ?chapters_label.
@@ -108,9 +109,9 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX Main: <http://www.semanticweb.org/EdxOntology/Main#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 select  ?concept_label ?course_label (COUNT(?concept_label) AS ?all)
-where { ?concept rdf:type Main:Concept.
+where { ?concept rdf:type Main:ConceptCandidate.
     	?concept rdfs:label ?concept_label.
-    	?unit Main:hasConcept ?concept.
+    	?unit Main:hasConceptCandidate ?concept.
   		?vertical Main:consistsOf ?unit.
   		?seq Main:consistsOf ?vertical.
   		?chapters Main:consistsOf ?seq.

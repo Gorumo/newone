@@ -52,7 +52,16 @@
         <rdfs:label xml:lang="en">Compose</rdfs:label>
         <rdfs:label xml:lang="ru">Составляют</rdfs:label>
         <rdfs:range rdf:resource="&Main;Course"/>
+        <rdfs:domain rdf:resource="&Main;Discussion"/>
+        <rdfs:domain rdf:resource="&Main;HTML"/>
+        <rdfs:domain rdf:resource="&Main;Problem"/>
+        <rdfs:range rdf:resource="&Main;Sections"/>
         <rdfs:domain rdf:resource="&Main;Sections"/>
+        <rdfs:domain rdf:resource="&Main;Subsections"/>
+        <rdfs:range rdf:resource="&Main;Subsections"/>
+        <rdfs:range rdf:resource="&Main;Units"/>
+        <rdfs:domain rdf:resource="&Main;Units"/>
+        <rdfs:domain rdf:resource="&Main;Video"/>
         <owl:inverseOf rdf:resource="&Main;consistsOf"/>
     </owl:ObjectProperty>
     
@@ -482,8 +491,8 @@
     <!-- http://www.semanticweb.org/EdxOntology/Main#Candidate -->
 
     <owl:Class rdf:about="&Main;Candidate">
-        <rdfs:label xml:lang="en">Candidate</rdfs:label>
-        <rdfs:label xml:lang="ru">Кандидат в термины</rdfs:label>
+        <rdfs:label xml:lang="en">Concept candidate</rdfs:label>
+        <rdfs:label xml:lang="ru">Кандидат в концепты</rdfs:label>
         <rdfs:subClassOf rdf:resource="&Main;Concept"/>
     </owl:Class>
     
@@ -492,9 +501,8 @@
     <!-- http://www.semanticweb.org/EdxOntology/Main#Concept -->
 
     <owl:Class rdf:about="&Main;Concept">
-        <rdfs:label xml:lang="en">Term</rdfs:label>
-        <rdfs:label xml:lang="ru">Термин</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&Main;SubjectArea"/>
+        <rdfs:label xml:lang="en">Concept of subject field</rdfs:label>
+        <rdfs:label xml:lang="ru">Концепт предметной области</rdfs:label>
     </owl:Class>
     
 
@@ -521,9 +529,8 @@
     <!-- http://www.semanticweb.org/EdxOntology/Main#Field -->
 
     <owl:Class rdf:about="&Main;Field">
-        <rdfs:label xml:lang="en">Field</rdfs:label>
-        <rdfs:label xml:lang="ru">Область</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&Main;SubjectArea"/>
+        <rdfs:label xml:lang="en">Field of knowledge (physics, math, etc)</rdfs:label>
+        <rdfs:label xml:lang="ru">Предметная область</rdfs:label>
     </owl:Class>
     
 
@@ -642,15 +649,6 @@
         <rdfs:label xml:lang="en">Student</rdfs:label>
         <rdfs:label xml:lang="ru">Студент</rdfs:label>
         <rdfs:subClassOf rdf:resource="&Main;Person"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/EdxOntology/Main#SubjectArea -->
-
-    <owl:Class rdf:about="&Main;SubjectArea">
-        <rdfs:label xml:lang="en">SubjectArea</rdfs:label>
-        <rdfs:label xml:lang="ru">Предметная область</rdfs:label>
     </owl:Class>
     
 
