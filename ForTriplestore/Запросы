@@ -122,3 +122,20 @@ where { ?concept rdf:type Main:ConceptCandidate.
 order by desc(?all)
 
 
+!!!!!!!!!Количество уникальных концептов в курсах и всего концептов в курсе!!!!
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX Main: <http://www.semanticweb.org/EdxOntology/Main#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+select ?course_label ?course (COUNT(?concept_label) AS ?all) (COUNT(DISTINCT ?concept_label) AS ?uniq) 
+where { ?concept rdf:type Main:Concept.
+    	?concept rdfs:label ?concept_label.
+    	?unit Main:hasConcept ?concept.
+  		?vertical Main:consistsOf ?unit.
+  		?seq Main:consistsOf ?vertical.
+  		?chapters Main:consistsOf ?seq.
+  		?course Main:consistsOf ?chapters.
+    	?course rdfs:label ?course_label.
+		}
+group by ?course_label ?course
+order by desc(?uniq)
