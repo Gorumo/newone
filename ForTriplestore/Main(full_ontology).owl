@@ -46,6 +46,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/EdxOntology/Main#belongsToDomain -->
+
+    <owl:ObjectProperty rdf:about="&Main;belongsToDomain">
+        <rdfs:domain rdf:resource="&Main;Concept"/>
+        <rdfs:range rdf:resource="&Main;Knowledge_domain"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/EdxOntology/Main#compose -->
 
     <owl:ObjectProperty rdf:about="&Main;compose">
@@ -97,6 +106,7 @@
     <owl:ObjectProperty rdf:about="&Main;hasConcept">
         <rdfs:label xml:lang="en">Has concept</rdfs:label>
         <rdfs:label xml:lang="ru">Содержит концепт</rdfs:label>
+        <rdfs:range rdf:resource="&Main;Concept"/>
         <rdfs:domain rdf:resource="&Main;Discussion"/>
         <rdfs:domain rdf:resource="&Main;HTML"/>
         <rdfs:domain rdf:resource="&Main;Video"/>
@@ -115,11 +125,20 @@
     
 
 
+    <!-- http://www.semanticweb.org/EdxOntology/Main#includesConcept -->
+
+    <owl:ObjectProperty rdf:about="&Main;includesConcept">
+        <owl:inverseOf rdf:resource="&Main;belongsToDomain"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/EdxOntology/Main#isContainedIn -->
 
     <owl:ObjectProperty rdf:about="&Main;isContainedIn">
         <rdfs:label xml:lang="en">Is contained in</rdfs:label>
         <rdfs:label xml:lang="ru">Содержится</rdfs:label>
+        <rdfs:domain rdf:resource="&Main;Concept"/>
         <rdfs:range rdf:resource="&Main;Discussion"/>
         <rdfs:range rdf:resource="&Main;HTML"/>
         <rdfs:range rdf:resource="&Main;Video"/>
@@ -526,15 +545,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/EdxOntology/Main#Field -->
-
-    <owl:Class rdf:about="&Main;Field">
-        <rdfs:label xml:lang="en">Field of knowledge (physics, math, etc)</rdfs:label>
-        <rdfs:label xml:lang="ru">Предметная область</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/EdxOntology/Main#FinalExam -->
 
     <owl:Class rdf:about="&Main;FinalExam">
@@ -561,6 +571,15 @@
         <rdfs:label xml:lang="en">Homework</rdfs:label>
         <rdfs:label xml:lang="ru">Домашняя работа</rdfs:label>
         <rdfs:subClassOf rdf:resource="&Main;Assignment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/EdxOntology/Main#Knowledge_domain -->
+
+    <owl:Class rdf:about="&Main;Knowledge_domain">
+        <rdfs:label xml:lang="en">Field of knowledge (physics, math, etc)</rdfs:label>
+        <rdfs:label xml:lang="ru">Предметная область</rdfs:label>
     </owl:Class>
     
 
