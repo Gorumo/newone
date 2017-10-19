@@ -1,0 +1,1134 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/EdxOntology/Main"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/EdxOntology/Main">
+    <Prefix name="" IRI="http://www.semanticweb.org/dvolchek/ontologies/2015/10/untitled-ontology-24#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="Main" IRI="http://www.semanticweb.org/EdxOntology/Main#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="EdX_Ontology" IRI="http://www.semanticweb.org/dvolchek/ontologies/2015/10/EdX_Ontology#"/>
+    <Declaration>
+        <Class IRI="http://linkedscience.org/teach/ns#Assignment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://linkedscience.org/teach/ns#Course"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://linkedscience.org/teach/ns#Material"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://linkedscience.org/teach/ns#Student"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://linkedscience.org/teach/ns#Teacher"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/vocab/aiiso/schema#Course"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Assignment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Candidate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Concept"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Course"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Discussion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FinalExam"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HTML"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Homework"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#KnowledgeDomain"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lab"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Material"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MidExam"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#News"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Person"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Problem"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Section"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Staff"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Student"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Subsection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Teacher"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Texbook"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Unit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UserGrades"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Video"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Wiki"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://xmlns.com/foaf/0.1/Person"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#belongsToCourse"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#belongsToDomain"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#creates"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasConcept"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDiscussion"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasHTML"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMaterial"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasProblem"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSection"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSubsection"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasUnit"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasVideo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#includesConcept"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isContainedIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isGradedAs"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isMadeBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isSupportedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isTakenBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#support"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#takes"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://linkedscience.org/teach/ns#deadline"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://linkedscience.org/teach/ns#weeklyHours"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#answerVisibility"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#attempts"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#content"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#courseImage"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#discussionAbout"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#dueDate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#endDate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hint"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hoursPerWeek"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#overwiev"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#source"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#startDate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#title"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#transcript"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#visibility"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#weight"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="http://linkedscience.org/teach/ns#Assignment"/>
+        <Class IRI="#Assignment"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://linkedscience.org/teach/ns#Course"/>
+        <Class IRI="#Course"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://linkedscience.org/teach/ns#Material"/>
+        <Class IRI="#Material"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://linkedscience.org/teach/ns#Student"/>
+        <Class IRI="#Student"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://linkedscience.org/teach/ns#Teacher"/>
+        <Class IRI="#Teacher"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.org/vocab/aiiso/schema#Course"/>
+        <Class IRI="#Course"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Person"/>
+        <Class IRI="http://xmlns.com/foaf/0.1/Person"/>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Candidate"/>
+        <Class IRI="#Concept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FinalExam"/>
+        <Class IRI="#Assignment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Homework"/>
+        <Class IRI="#Assignment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lab"/>
+        <Class IRI="#Assignment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MidExam"/>
+        <Class IRI="#Assignment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#News"/>
+        <Class IRI="#Material"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Staff"/>
+        <Class IRI="#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Student"/>
+        <Class IRI="#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Teacher"/>
+        <Class IRI="#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Texbook"/>
+        <Class IRI="#Material"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserGrades"/>
+        <Class IRI="#Assignment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wiki"/>
+        <Class IRI="#Material"/>
+    </SubClassOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasMaterial"/>
+        <ObjectProperty IRI="#belongsToCourse"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#includesConcept"/>
+        <ObjectProperty IRI="#belongsToDomain"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isMadeBy"/>
+        <ObjectProperty IRI="#creates"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isContainedIn"/>
+        <ObjectProperty IRI="#hasConcept"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#support"/>
+        <ObjectProperty IRI="#isSupportedBy"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#takes"/>
+        <ObjectProperty IRI="#isTakenBy"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#belongsToCourse"/>
+        <Class IRI="#Material"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#belongsToDomain"/>
+        <Class IRI="#Concept"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#creates"/>
+        <Class IRI="#Teacher"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasConcept"/>
+        <Class IRI="#Discussion"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasConcept"/>
+        <Class IRI="#HTML"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasConcept"/>
+        <Class IRI="#Problem"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasConcept"/>
+        <Class IRI="#Video"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDiscussion"/>
+        <Class IRI="#Unit"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasHTML"/>
+        <Class IRI="#Unit"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasMaterial"/>
+        <Class IRI="#Course"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasProblem"/>
+        <Class IRI="#Unit"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSection"/>
+        <Class IRI="http://linkedscience.org/teach/ns#Course"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSubsection"/>
+        <Class IRI="#Section"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasUnit"/>
+        <Class IRI="#Subsection"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasVideo"/>
+        <Class IRI="#Unit"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isContainedIn"/>
+        <Class IRI="#Concept"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isGradedAs"/>
+        <Class IRI="#Subsection"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isMadeBy"/>
+        <Class IRI="#Course"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isSupportedBy"/>
+        <Class IRI="#Course"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isTakenBy"/>
+        <Class IRI="#Course"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#support"/>
+        <Class IRI="#Staff"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#support"/>
+        <Class IRI="#Teacher"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#takes"/>
+        <Class IRI="#Student"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#belongsToCourse"/>
+        <Class IRI="#Course"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#belongsToDomain"/>
+        <Class IRI="#KnowledgeDomain"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#creates"/>
+        <Class IRI="#Course"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasConcept"/>
+        <Class IRI="#Concept"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDiscussion"/>
+        <Class IRI="#Discussion"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasHTML"/>
+        <Class IRI="#HTML"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasMaterial"/>
+        <Class IRI="#Material"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasProblem"/>
+        <Class IRI="#Problem"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSection"/>
+        <Class IRI="#Section"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSubsection"/>
+        <Class IRI="#Subsection"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasUnit"/>
+        <Class IRI="#Unit"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasVideo"/>
+        <Class IRI="#Video"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isContainedIn"/>
+        <Class IRI="#Discussion"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isContainedIn"/>
+        <Class IRI="#HTML"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isContainedIn"/>
+        <Class IRI="#Problem"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isContainedIn"/>
+        <Class IRI="#Video"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isGradedAs"/>
+        <Class IRI="#Assignment"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isMadeBy"/>
+        <Class IRI="#Teacher"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isSupportedBy"/>
+        <Class IRI="#Staff"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isSupportedBy"/>
+        <Class IRI="#Teacher"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isTakenBy"/>
+        <Class IRI="#Student"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#support"/>
+        <Class IRI="#Course"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#takes"/>
+        <Class IRI="#Course"/>
+    </ObjectPropertyRange>
+    <EquivalentDataProperties>
+        <DataProperty IRI="http://linkedscience.org/teach/ns#deadline"/>
+        <DataProperty IRI="#dueDate"/>
+    </EquivalentDataProperties>
+    <EquivalentDataProperties>
+        <DataProperty IRI="http://linkedscience.org/teach/ns#weeklyHours"/>
+        <DataProperty IRI="#hoursPerWeek"/>
+    </EquivalentDataProperties>
+    <DataPropertyDomain>
+        <DataProperty IRI="#answerVisibility"/>
+        <Class IRI="#Problem"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#attempts"/>
+        <Class IRI="#Problem"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#content"/>
+        <Class IRI="#HTML"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#courseImage"/>
+        <Class IRI="#Course"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#discussionAbout"/>
+        <Class IRI="#Discussion"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#dueDate"/>
+        <Class IRI="#Subsection"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#endDate"/>
+        <Class IRI="#Course"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hint"/>
+        <Class IRI="#Problem"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hoursPerWeek"/>
+        <Class IRI="#Course"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#name"/>
+        <Class IRI="#Course"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#name"/>
+        <Class IRI="#Section"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#name"/>
+        <Class IRI="#Subsection"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#name"/>
+        <Class IRI="#Unit"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#name"/>
+        <Class IRI="#Video"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#overwiev"/>
+        <Class IRI="#Course"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#source"/>
+        <Class IRI="#Video"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#startDate"/>
+        <Class IRI="#Course"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#startDate"/>
+        <Class IRI="#Section"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#startDate"/>
+        <Class IRI="#Subsection"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#title"/>
+        <Class IRI="#Discussion"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#transcript"/>
+        <Class IRI="#Video"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#visibility"/>
+        <Class IRI="#Section"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#visibility"/>
+        <Class IRI="#Subsection"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#visibility"/>
+        <Class IRI="#Unit"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#weight"/>
+        <Class IRI="#Problem"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#answerVisibility"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#attempts"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#content"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#courseImage"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#discussionAbout"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#dueDate"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#endDate"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hint"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hoursPerWeek"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#overwiev"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#source"/>
+        <Datatype abbreviatedIRI="xsd:anyURI"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#startDate"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#title"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#transcript"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#visibility"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#weight"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://linkedscience.org/teach/ns#Assignment</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Assigment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://linkedscience.org/teach/ns#Course</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Course</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://linkedscience.org/teach/ns#Material</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Material</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://linkedscience.org/teach/ns#Student</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Student</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://linkedscience.org/teach/ns#Teacher</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Teacher</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.org/vocab/aiiso/schema#Course</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Course</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Assignment</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Assignment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Candidate</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Candidate</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Concept</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Concept</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Course</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Course</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Discussion</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Discussion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#FinalExam</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Final Exam</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#HTML</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">HTML</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Homework</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Homework</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#KnowledgeDomain</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">KnowledgeDomain</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Lab</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Lab</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Material</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Material</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MidExam</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">MidExam</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#News</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">News</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Person</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Person</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Problem</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Problem</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Section</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Section</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Staff</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Staff</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Student</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Student</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Subsection</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Subsection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Teacher</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Teacher</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Texbook</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Textbook</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Unit</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Unit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#UserGrades</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">UserGrades</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Video</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Video</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Wiki</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Wiki</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#answerVisibility</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Answer visibility</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#answerVisibility</IRI>
+        <Literal xml:lang="ru" datatypeIRI="&rdf;PlainLiteral">Видимость ответа</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#attempts</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Attempts</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#attempts</IRI>
+        <Literal xml:lang="ru" datatypeIRI="&rdf;PlainLiteral">Попытки</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#belongsToCourse</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Belongs to Course</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#belongsToDomain</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Belongs to Domain</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#content</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">HTML content</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#content</IRI>
+        <Literal xml:lang="ru" datatypeIRI="&rdf;PlainLiteral">HTML контент</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#courseImage</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Course Image</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#courseImage</IRI>
+        <Literal xml:lang="ru" datatypeIRI="&rdf;PlainLiteral">Изображение курса</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#creates</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Creates</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#discussionAbout</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">What discussion is about</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#discussionAbout</IRI>
+        <Literal xml:lang="ru" datatypeIRI="&rdf;PlainLiteral">О чем дискуссия</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#dueDate</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Due date</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#dueDate</IRI>
+        <Literal xml:lang="ru" datatypeIRI="&rdf;PlainLiteral">Срок сдачи</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#endDate</IRI>
+        <Literal xml:lang="ru" datatypeIRI="&rdf;PlainLiteral">The date when course ends</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#endDate</IRI>
+        <Literal xml:lang="ru" datatypeIRI="&rdf;PlainLiteral">Дата окончания</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasConcept</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Has concept</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasDiscussion</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Has Discussion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasHTML</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Has HTML</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasMaterial</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Has Material</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasProblem</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Has Problem</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasSection</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Has Section</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasSubsection</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Has Subsection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasUnit</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Has Unit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasVideo</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Has Video</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hint</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Hint</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hint</IRI>
+        <Literal xml:lang="ru" datatypeIRI="&rdf;PlainLiteral">Подсказка</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hoursPerWeek</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Hours per week that student need to study the course</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hoursPerWeek</IRI>
+        <Literal xml:lang="ru" datatypeIRI="&rdf;PlainLiteral">Часов в неделю</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#includesConcept</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Includes Concept</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isContainedIn</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Is contained in</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isGradedAs</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Is graded as</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isMadeBy</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Is made by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isSupportedBy</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Is supported by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isTakenBy</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Is taken by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#name</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#name</IRI>
+        <Literal xml:lang="ru" datatypeIRI="&rdf;PlainLiteral">Название</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#overwiev</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Course overview</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#overwiev</IRI>
+        <Literal xml:lang="ru" datatypeIRI="&rdf;PlainLiteral">Краткое описание курса</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#source</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Source the video is from</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#source</IRI>
+        <Literal xml:lang="ru" datatypeIRI="&rdf;PlainLiteral">Источник видео</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#startDate</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Start date</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#startDate</IRI>
+        <Literal xml:lang="ru" datatypeIRI="&rdf;PlainLiteral">Дата начала</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#support</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Supports</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#takes</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Takes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#title</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Title</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#title</IRI>
+        <Literal xml:lang="ru" datatypeIRI="&rdf;PlainLiteral">Заголовок</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#transcript</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Transcript or subtitles</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#transcript</IRI>
+        <Literal xml:lang="ru" datatypeIRI="&rdf;PlainLiteral">Субтитры</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#visibility</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Visibility</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#visibility</IRI>
+        <Literal xml:lang="ru" datatypeIRI="&rdf;PlainLiteral">Видимость</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#weight</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Weight</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#weight</IRI>
+        <Literal xml:lang="ru" datatypeIRI="&rdf;PlainLiteral">Вес</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://xmlns.com/foaf/0.1/Person</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Person</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+
