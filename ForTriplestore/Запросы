@@ -139,3 +139,35 @@ where { ?concept rdf:type Main:Concept.
 		}
 group by ?course_label ?course
 order by desc(?uniq)
+
+!!!!!!!!!!!Вхождение концепта в различные Units!!!!!!!!!!!!
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX Main: <http://www.semanticweb.org/EdxOntology/Main#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+select DISTINCT ?concept_label (COUNT(?unit) AS ?all)
+where { ?concept rdf:type Main:Concept.
+    	?concept rdfs:label ?concept_label.
+    	?unit Main:hasConcept ?concept.
+  		?vertical Main:consistsOf ?unit.
+  		?seq Main:consistsOf ?vertical.
+  		?chapters Main:consistsOf ?seq.
+  		?course Main:consistsOf ?chapters.
+    	}
+group by ?concept_label
+order by desc(?all)
+
+!!!!!!!!!!Вхождение концепта в различные курсы!!!!!!!!!!!!!
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX Main: <http://www.semanticweb.org/EdxOntology/Main#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+select ?concept_label (COUNT(DISTINCT ?course) AS ?all)
+where { ?concept rdf:type Main:Concept.
+    	?concept rdfs:label ?concept_label.
+    	?unit Main:hasConcept ?concept.
+  		?vertical Main:consistsOf ?unit.
+  		?seq Main:consistsOf ?vertical.
+  		?chapters Main:consistsOf ?seq.
+  		?course Main:consistsOf ?chapters
+    	}
+group by ?concept_label
+order by desc(?all)

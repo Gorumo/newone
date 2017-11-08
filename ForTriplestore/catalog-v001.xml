@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1503052630713" name="duplicate:http://www.semanticweb.org/EdxOntology/Main" uri="For%20diagram.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1503052630713" name="duplicate:http://www.semanticweb.org/EdxOntology/Main" uri="Main(Reasoned).owl"/>
-        <uri id="Automatically generated entry, Timestamp=1503052630713" name="duplicate:http://www.semanticweb.org/EdxOntology/Main" uri="Parced%20concepts(with%20the%20sceleton%20of%20ontology)%20(Reasoned).rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1503052630713" name="http://www.semanticweb.org/EdxOntology/untitled-ontology-144" uri="t.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1503052630713" name="duplicate:http://www.semanticweb.org/dvolchek/ontologies/2015/10/untitled-ontology-24" uri="Main(full_ontology).owl"/>
-        <uri id="Automatically generated entry, Timestamp=1503052630713" name="duplicate:http://www.semanticweb.org/dvolchek/ontologies/2015/10/untitled-ontology-24" uri="Main(full_ontology).rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1510036212132" name="duplicate:http://www.semanticweb.org/EdxOntology/Main" uri="For%20diagram.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1510036212132" name="duplicate:http://www.semanticweb.org/EdxOntology/Main" uri="Main(Reasoned).owl"/>
+        <uri id="Automatically generated entry, Timestamp=1510036212132" name="duplicate:http://www.semanticweb.org/EdxOntology/Main" uri="Parced%20concepts(with%20the%20sceleton%20of%20ontology)%20(Reasoned).rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1510036212132" name="http://www.semanticweb.org/EdxOntology/untitled-ontology-144" uri="t.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1510036212132" name="duplicate:http://www.semanticweb.org/dvolchek/ontologies/2015/10/untitled-ontology-24" uri="Main(full_ontology).owl"/>
+        <uri id="Automatically generated entry, Timestamp=1510036212132" name="duplicate:http://www.semanticweb.org/dvolchek/ontologies/2015/10/untitled-ontology-24" uri="Main(full_ontology).rdf"/>
     </group>
 </catalog>
